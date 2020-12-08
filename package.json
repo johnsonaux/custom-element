@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --output-hashing=none",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "package": "jscat ./dist/maau-custom/runtime.js ./dist/maau-custom/polyfills.js ./dist/maau-custom/scripts.js ./dist/maau-custom/main.js > maau-custom.js"
   },
   "private": true,
   "dependencies": {
@@ -15,11 +16,17 @@
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
+    "@angular/elements": "^7.2.16",
+    "@angular/fire": "^5.4.2",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@webcomponents/custom-elements": "^1.4.3",
     "core-js": "^2.5.4",
+    "document-register-element": "^1.7.2",
+    "firebase": "^7.14.2",
+    "jscat": "0.0.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

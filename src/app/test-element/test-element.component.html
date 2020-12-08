@@ -1,0 +1,5 @@
+<button class="custom-button"
+        (click)="setHighlighted()"
+        [ngStyle]="{ 'background': isHighlighted ? highlightColor : backgroundColor }">
+  {{ label }}
+</button>
